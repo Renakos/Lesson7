@@ -1,0 +1,525 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.LessonFive" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.LessonFive" parent="Base.Theme.LessonFive" />
+
+    <style name="WeatherTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="dayimgs">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+    <style name="datetime">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">20dp</item>
+        <item name="android:layout_marginVertical">20dp</item>
+    </style>
+    <style name="locationtext">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">20dp</item>
+        <item name="android:layout_marginVertical">20dp</item>
+    </style>
+    <style name="locationimg">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">20dp</item>
+    </style>
+
+    <style name="sunnydayimg">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">40dp</item>
+        <item name="android:layout_marginVertical">40dp</item>
+    </style>
+    <style name="sunmeaning">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">40dp</item>
+    </style>
+    <style name="degree">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">140dp</item>
+        <item name="android:layout_marginVertical">40dp</item>
+    </style>
+    <style name="updegree">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">40dp</item>
+    </style>
+    <style name="uparrow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">40dp</item>
+        <item name="android:layout_marginVertical">5dp</item>
+    </style>
+    <style name="downdegree">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="downarrow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">40dp</item>
+        <item name="android:layout_marginVertical">5dp</item>
+    </style>
+    <style name="humidity">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">10dp</item>
+        <item name="android:layout_marginVertical">40dp</item>
+    </style>
+    <style name="perhum">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">10dp</item>
+    </style>
+    <style name="hummeaning">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="barometer">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">20dp</item>
+    </style>
+    <style name="mbar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">10dp</item>
+    </style>
+    <style name="pressurmean">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <ImageView
+        android:id="@+id/wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/wind"
+        app:layout_constraintLeft_toLeftOf="@id/barometer"
+        android:layout_marginHorizontal="140dp"
+        app:layout_constraintTop_toTopOf="@id/barometer"/>
+    <style name="wind">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">140dp</item>
+    </style>
+
+    <style name="windval">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">20dp</item>
+    </style>
+    <TextView
+        android:id="@+id/windmeaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        app:layout_constraintTop_toBottomOf="@id/windvalue"
+        app:layout_constraintLeft_toLeftOf="@id/windvalue"
+        app:layout_constraintRight_toRightOf="@id/windvalue"
+        android:text="@string/windmean"/>
+    <style name="windmean">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <ImageView
+        android:id="@+id/sunset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sunset"
+        app:layout_constraintTop_toBottomOf="@id/humiditymeaning"
+        app:layout_constraintLeft_toLeftOf="@id/humiditymeaning"
+        app:layout_constraintRight_toRightOf="@id/humiditymeaning"
+        android:layout_marginVertical="40dp"/>
+    <style name="sunset">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">40dp</item>
+    </style>
+    <TextView
+        android:id="@+id/settime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sunset"
+        app:layout_constraintTop_toBottomOf="@id/sunset"
+        app:layout_constraintLeft_toLeftOf="@id/sunset"
+        app:layout_constraintRight_toRightOf="@id/sunset"
+        android:layout_marginVertical="20dp"/>
+    <style name="settime">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">20dp</item>
+    </style>
+    <TextView
+        android:id="@+id/sunsetmeaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sunsetmeaning"
+        app:layout_constraintTop_toBottomOf="@id/settime"
+        app:layout_constraintLeft_toLeftOf="@id/settime"
+        app:layout_constraintRight_toRightOf="@id/settime"
+        android:textSize="10dp"/>
+    <style name="sunsetmean">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <ImageView
+        android:id="@+id/sunrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sunrise"
+        app:layout_constraintTop_toBottomOf="@id/pressuremeaning"
+        app:layout_constraintLeft_toLeftOf="@id/pressuremeaning"
+        android:layout_marginVertical="36dp" />
+    <style name="sunrise">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">36dp</item>
+    </style>
+    <TextView
+        android:id="@+id/risetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sunrise"
+        app:layout_constraintTop_toBottomOf="@id/sunrise"
+        app:layout_constraintLeft_toLeftOf="@id/sunrise"
+        app:layout_constraintRight_toRightOf="@id/sunrise"
+        android:layout_marginVertical="20dp"/>
+    <style name="risetime">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">20dp</item>
+    </style>
+    <TextView
+        android:id="@+id/sunrisemeaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sunrise"
+        app:layout_constraintTop_toBottomOf="@id/risetime"
+        app:layout_constraintLeft_toLeftOf="@id/risetime"
+        app:layout_constraintRight_toRightOf="@id/risetime"
+        android:textSize="10dp"/>
+    <style name="sunrisemean">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <ImageView
+        android:id="@+id/daytimehours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sandclock"
+        app:layout_constraintTop_toBottomOf="@id/windmeaning"
+        app:layout_constraintRight_toRightOf="@id/windmeaning"
+        app:layout_constraintLeft_toLeftOf="@id/windmeaning"
+        android:layout_marginVertical="36dp"/>
+    <style name="daytimehours">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">36dp</item>
+    </style>
+    <TextView
+        android:id="@+id/daytimehoursvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/daytime"
+        app:layout_constraintTop_toBottomOf="@id/daytimehours"
+        app:layout_constraintLeft_toLeftOf="@id/daytimehours"
+        app:layout_constraintRight_toRightOf="@id/daytimehours"
+        android:layout_marginVertical="20dp"/>
+    <style name="daytimehoursval">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">20dp</item>
+    </style>
+    <TextView
+        android:id="@+id/daytimehoursmeaning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/daytimemean"
+        app:layout_constraintTop_toBottomOf="@id/daytimehoursvalue"
+        app:layout_constraintLeft_toLeftOf="@id/daytimehoursvalue"
+        app:layout_constraintRight_toRightOf="@id/daytimehoursvalue"
+        android:textSize="10dp"/>
+    <style name="daytimehoursm">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/whensun"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="40dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sunsetmeaning">
+    <style name="whensun">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_marginHorizontal">20dp</item>
+        <item name="android:layout_marginVertical">40dp</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">40dp</item>
+    </style>
+    <ImageView
+        android:id="@+id/whensunimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sun"
+        android:layout_marginHorizontal="36dp"
+        app:layout_constraintTop_toTopOf="@id/whensun"
+        app:layout_constraintLeft_toLeftOf="@id/whensun"
+        app:layout_constraintRight_toRightOf="@id/whensun"/>
+    <style name="whensunimg">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">36dp</item>
+    </style>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mon21mean"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginVertical="20dp"/>
+    <style name="mon21me">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">26dp</item>
+        <item name="android:layout_marginVertical">20dp</item>
+    </style>
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/monup"
+    android:textSize="8dp"
+    android:layout_marginVertical="40dp" />
+    <style name="monup">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">40dp</item>
+    </style>
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/arrowup"
+    android:layout_marginVertical="42dp"
+    android:layout_marginHorizontal="20dp"/>
+    <style name="arrowup">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">20dp</item>
+        <item name="android:layout_marginVertical">42dp</item>
+    </style>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mondown"
+        android:textSize="8dp"
+        android:layout_marginVertical="40dp"
+        android:layout_marginHorizontal="30dp"/>
+    <style name="mondown">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">30dp</item>
+        <item name="android:layout_marginVertical">40dp</item>
+    </style>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrowdown"
+        android:layout_marginVertical="40dp"
+        android:layout_marginHorizontal="48dp"/>
+
+    <style name="arrowdown">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">48dp</item>
+        <item name="android:layout_marginVertical">40dp</item>
+    </style>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/whencloudy"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/sunrisemeaning"
+        app:layout_constraintLeft_toLeftOf="@id/whensun"
+        android:layout_marginHorizontal="130dp"
+        android:layout_marginVertical="40dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"/>
+    <style name="whencloud">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_marginHorizontal">130dp</item>
+        <item name="android:layout_marginVertical">40dp</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">5dp</item>
+    </style>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cloudy"
+        android:layout_marginHorizontal="36dp"
+        app:layout_constraintTop_toTopOf="@id/whensun"
+        app:layout_constraintLeft_toLeftOf="@id/whensun"
+        app:layout_constraintRight_toRightOf="@id/whensun"/>
+    <style name="cloudimg">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">36dp</item>
+    </style>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tue22mean"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginVertical="20dp"/>
+    <style name="tue22mean">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">26dp</item>
+        <item name="android:layout_marginVertical">20dp</item>
+    </style>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tueup"
+        android:textSize="8dp"
+        android:layout_marginVertical="40dp" />
+    <style name="tueup">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">40dp</item>
+    </style>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrowup"
+        android:layout_marginVertical="42dp"
+        android:layout_marginHorizontal="20dp"/>
+    <style name="tueimgup">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">20dp</item>
+        <item name="android:layout_marginVertical">42dp</item>
+    </style>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tuedown"
+        android:textSize="8dp"
+        android:layout_marginVertical="40dp"
+        android:layout_marginHorizontal="30dp"/>
+    <style name="tuedown">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">30dp</item>
+        <item name="android:layout_marginVertical">40dp</item>
+    </style>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrowdown"
+        android:layout_marginVertical="40dp"
+        android:layout_marginHorizontal="48dp"/>
+    <style name="tueimgdown">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">48dp</item>
+        <item name="android:layout_marginVertical">40dp</item>
+    </style>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/whenwindy"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/daytimehoursmeaning"
+        app:layout_constraintLeft_toLeftOf="@id/whencloudy"
+        android:layout_marginHorizontal="130dp"
+        android:layout_marginVertical="40dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"/>
+    <style name="whenwindy">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_marginHorizontal">130dp</item>
+        <item name="android:layout_marginVertical">40dp</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">5dp</item>
+    </style>
+    <style name="cloudyimg">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">36dp</item>
+    </style>
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/wed23mean"
+    android:layout_marginHorizontal="26dp"
+    android:layout_marginVertical="20dp"/>
+    <style name="wed23mean">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">26dp</item>
+        <item name="android:layout_marginVertical">20dp</item>
+    </style>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wedup"
+        android:textSize="8dp"
+        android:layout_marginVertical="40dp" />
+    <style name="wedup">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginVertical">40dp</item>
+    </style>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrowup"
+        android:layout_marginVertical="42dp"
+        android:layout_marginHorizontal="20dp"/>
+    <style name="wed23imgup">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">20dp</item>
+        <item name="android:layout_marginVertical">42dp</item>
+    </style>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weddown"
+        android:textSize="8dp"
+        android:layout_marginVertical="40dp"
+        android:layout_marginHorizontal="30dp"/>
+    <style name="wed23down">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">30dp</item>
+        <item name="android:layout_marginVertical">40dp</item>
+    </style>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrowdown"
+        android:layout_marginVertical="40dp"
+        android:layout_marginHorizontal="48dp"/>
+    <style name="wed23imgup">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">48dp</item>
+        <item name="android:layout_marginVertical">40dp</item>
+    </style>
+</resources>

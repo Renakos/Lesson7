@@ -1,0 +1,30 @@
+<resources>
+    <string name="degree19">33°C</string>
+    <string name="degreemost">35°C</string>
+    <string name="degreeleast">27°C</string>
+    <string name="weather">Sunny</string>
+    <string name="date">Sunday, 19 May 2019 | 4:30PM</string>
+    <string name="location">Mumbai,India</string>
+    <string name="hum">49%</string>
+    <string name="pressure">1,007mBar</string>
+    <string name="wind">23km/h</string>
+    <string name="sunrise">6:03 AM</string>
+    <string name="daytime">13h 1m</string>
+    <string name="monup">35°C</string>
+    <string name="mondown">26°C</string>
+    <string name="tueup">35°C</string>
+    <string name="tuedown">27°C</string>
+    <string name="wedup">34°C</string>
+    <string name="weddown">29°C</string>
+    <string name="sunset">7:05 PM</string>
+    <string name="hummeaning">Humidity</string>
+    <string name="sunmeaning">Sunny</string>
+    <string name="pressmean">Pressure</string>
+    <string name="windmean">Wind</string>
+    <string name="sunrisemeaning">Sunrise</string>
+    <string name="sunsetmeaning">Sunset</string>
+    <string name="daytimemean">Daytime</string>
+    <string name="mon21mean">Mon,21</string>
+    <string name="tue22mean">Tue,22</string>
+    <string name="wed23mean">Wed,23</string>
+</resources>

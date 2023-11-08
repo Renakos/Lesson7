@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ImageView
+        android:id="@+id/day"
+        style="@style/dayimgs"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/day" />
+
+    <TextView
+        android:id="@+id/datetime"
+        app:layout_constraintTop_toBottomOf="@id/day"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/date"
+        style="@style/datetime"
+        />
+    <TextView
+        android:id="@+id/location"
+        style="@style/locationtext"
+        android:text="@string/location"
+        app:layout_constraintRight_toRightOf="@id/day"
+        app:layout_constraintTop_toBottomOf="@id/day" />
+    <ImageView
+        app:layout_constraintLeft_toRightOf="@id/location"
+        app:layout_constraintTop_toBottomOf="@id/day"
+        style="@style/locationimg"
+        android:src="@drawable/location"/>
+    <ImageView
+        style="@style/sunnydayimg"
+        android:id="@+id/sunny"
+        app:layout_constraintTop_toBottomOf="@id/datetime"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/sunny" />
+    <TextView
+        style="@style/sunmeaning"
+        android:text="@string/sunmeaning"
+        app:layout_constraintTop_toBottomOf="@id/sunny"
+        app:layout_constraintLeft_toLeftOf="parent" />
+    <TextView
+        style="@style/degree"
+        android:id="@+id/degree"
+        app:layout_constraintTop_toBottomOf="@id/datetime"
+        app:layout_constraintLeft_toLeftOf="@id/datetime"
+        android:text="@string/degree19"
+        android:textSize="40dp" />
+    <TextView
+        style="@style/updegree"
+        android:id="@+id/updegree"
+        android:text="@string/degreemost"
+        app:layout_constraintTop_toBottomOf="@id/location"
+        app:layout_constraintRight_toRightOf="@id/location"/>
+    <ImageView
+        style="@style/uparrow"
+        android:id="@+id/uparrow"
+        android:src="@drawable/arrowup"
+        app:layout_constraintLeft_toLeftOf="@id/updegree"
+        app:layout_constraintBottom_toBottomOf="@id/updegree" />
+    <TextView
+        style="@style/downdegree"
+        android:id="@+id/downdegree"
+        android:text="@string/degreeleast"
+        app:layout_constraintTop_toBottomOf="@id/updegree"
+        app:layout_constraintRight_toRightOf="@id/updegree"/>
+    <ImageView
+        android:id="@+id/downarrow"
+        style="@style/downarrow"
+        android:src="@drawable/arrowdown"
+        app:layout_constraintLeft_toLeftOf="@id/downdegree"
+        app:layout_constraintBottom_toBottomOf="@id/downdegree" />
+    <ImageView
+        style="@style/humidity"
+        android:id="@+id/humidity"
+        android:src="@drawable/humidity"
+        app:layout_constraintTop_toBottomOf="@id/sunny"
+        app:layout_constraintRight_toRightOf="@id/sunny" />
+    <TextView
+        style="@style/perhum"
+        android:id="@+id/percentHum"
+        android:text="@string/hum"
+        app:layout_constraintTop_toBottomOf="@id/humidity"
+        app:layout_constraintRight_toRightOf="@id/humidity" />
+    <TextView
+        style="@style/hummeaning"
+        android:id="@+id/humiditymeaning"
+        android:text="@string/hummeaning"
+        android:textSize="10dp"
+        app:layout_constraintTop_toBottomOf="@id/percentHum"
+        app:layout_constraintLeft_toLeftOf="@id/percentHum"
+        app:layout_constraintRight_toRightOf="@id/percentHum" />
+    <ImageView
+        style="@style/barometer"
+        android:id="@+id/barometer"
+        android:src="@drawable/barometer"
+        app:layout_constraintLeft_toLeftOf="@id/degree"
+        app:layout_constraintTop_toBottomOf="@id/degree"
+        app:layout_constraintRight_toRightOf="@id/degree" />
+     <TextView
+         android:id="@+id/mbar"
+         style="@style/mbar"
+         android:text="@string/pressure"
+         app:layout_constraintTop_toBottomOf="@id/barometer"
+         app:layout_constraintLeft_toLeftOf="@id/barometer"
+         app:layout_constraintRight_toRightOf="@id/barometer" />
+    <TextView
+        android:id="@+id/pressuremeaning"
+        style="@style/pressurmean"
+        android:text="@string/pressmean"
+        app:layout_constraintTop_toBottomOf="@id/mbar"
+        app:layout_constraintLeft_toLeftOf="@id/mbar"
+        app:layout_constraintRight_toRightOf="@id/mbar"
+        android:textSize="10dp"/>
+    <ImageView
+        style="@style/wind"
+        android:id="@+id/wind"
+        android:src="@drawable/wind"
+        app:layout_constraintLeft_toLeftOf="@id/barometer"
+        app:layout_constraintTop_toTopOf="@id/barometer"/>
+
+    <TextView
+        android:id="@+id/windvalue"
+        style="windval"
+        android:layout_marginVertical="10dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/wind"
+        app:layout_constraintLeft_toLeftOf="@id/wind"
+        app:layout_constraintRight_toRightOf="@id/wind"
+        app:layout_constraintTop_toTopOf="@id/mbar" />
+
+    <TextView
+        android:id="@+id/windmeaning"
+        style="@style/windmean"
+        android:layout_width="19dp"
+        android:layout_height="11dp"
+        android:text="@string/windmean"
+        android:textSize="10dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@id/windvalue"
+        app:layout_constraintRight_toRightOf="@id/windvalue"
+        app:layout_constraintTop_toTopOf="@id/pressuremeaning" />
+
+    <ImageView
+        android:id="@+id/sunset"
+        style="@style/sunset"
+        android:src="@drawable/sunset"
+        app:layout_constraintTop_toBottomOf="@id/humiditymeaning"
+        app:layout_constraintLeft_toLeftOf="@id/humiditymeaning"
+        app:layout_constraintRight_toRightOf="@id/humiditymeaning" />
+    <TextView
+        android:id="@+id/settime"
+        style="@style/settime"
+        android:text="@string/sunset"
+        app:layout_constraintTop_toBottomOf="@id/sunset"
+        app:layout_constraintLeft_toLeftOf="@id/sunset"
+        app:layout_constraintRight_toRightOf="@id/sunset"
+       />
+    <TextView
+        android:id="@+id/sunsetmeaning"
+        style="@style/sunsetmean"
+        android:text="@string/sunsetmeaning"
+        app:layout_constraintTop_toBottomOf="@id/settime"
+        app:layout_constraintLeft_toLeftOf="@id/settime"
+        app:layout_constraintRight_toRightOf="@id/settime"
+        android:textSize="10dp"/>
+    <ImageView
+        android:id="@+id/sunrise"
+        style="@style/sunrise"
+        android:src="@drawable/sunrise"
+        app:layout_constraintTop_toBottomOf="@id/pressuremeaning"
+        app:layout_constraintLeft_toLeftOf="@id/pressuremeaning" />
+    <TextView
+        style="@style/risetime"
+        android:id="@+id/risetime"
+        android:text="@string/sunrise"
+        app:layout_constraintTop_toBottomOf="@id/sunrise"
+        app:layout_constraintLeft_toLeftOf="@id/sunrise"
+        app:layout_constraintRight_toRightOf="@id/sunrise" />
+    <TextView
+        android:id="@+id/sunrisemeaning"
+        style="@style/sunrisemean"
+        android:text="@string/sunrise"
+        app:layout_constraintTop_toBottomOf="@id/risetime"
+        app:layout_constraintLeft_toLeftOf="@id/risetime"
+        app:layout_constraintRight_toRightOf="@id/risetime"
+        android:textSize="10dp"/>
+    <ImageView
+        android:id="@+id/daytimehours"
+        style="@style/daytimehours"
+        android:src="@drawable/sandclock"
+        app:layout_constraintTop_toBottomOf="@id/windmeaning"
+        app:layout_constraintRight_toRightOf="@id/windmeaning"
+        app:layout_constraintLeft_toLeftOf="@id/windmeaning" />
+    <TextView
+        android:id="@+id/daytimehoursvalue"
+        style="@style/daytimehoursval"
+        android:text="@string/daytime"
+        app:layout_constraintTop_toBottomOf="@id/daytimehours"
+        app:layout_constraintLeft_toLeftOf="@id/daytimehours"
+        app:layout_constraintRight_toRightOf="@id/daytimehours" />
+    <TextView
+        android:id="@+id/daytimehoursmeaning"
+        style="@style/daytimehoursm"
+        android:text="@string/daytimemean"
+        app:layout_constraintTop_toBottomOf="@id/daytimehoursvalue"
+        app:layout_constraintLeft_toLeftOf="@id/daytimehoursvalue"
+        app:layout_constraintRight_toRightOf="@id/daytimehoursvalue"
+        android:textSize="10dp"/>
+
+    <androidx.cardview.widget.CardView
+        style="@style/whensun"
+        android:id="@+id/whensun"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sunsetmeaning">
+    <ImageView
+        style="@style/whensunimg"
+        android:id="@+id/whensunimg"
+        android:src="@drawable/sun"
+        app:layout_constraintTop_toTopOf="@id/whensun"
+        app:layout_constraintLeft_toLeftOf="@id/whensun"
+        app:layout_constraintRight_toRightOf="@id/whensun"/>
+    <TextView
+        style="@style/mon21me"
+        android:text="@string/mon21mean"/>
+    <TextView
+        style="@style/monup"
+        android:text="@string/monup"
+        android:textSize="8dp" />
+    <ImageView
+        style="@style/arrowup"
+        android:src="@drawable/arrowup" />
+        <TextView
+            style="@style/mondown"
+            android:text="@string/mondown"
+            android:textSize="8dp" />
+    <ImageView
+        style="@style/arrowdown"
+        android:src="@drawable/arrowdown" /></androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        style="@style/whencloud"
+        android:id="@+id/whencloudy"
+        app:layout_constraintTop_toBottomOf="@id/sunrisemeaning"
+        app:layout_constraintLeft_toLeftOf="@id/whensun">
+    <ImageView
+        style="@style/cloudimg"
+        android:src="@drawable/cloudy"
+        app:layout_constraintTop_toTopOf="@id/whensun"
+        app:layout_constraintLeft_toLeftOf="@id/whensun"
+        app:layout_constraintRight_toRightOf="@id/whensun"/>
+    <TextView
+        style="@style/tue22mean"
+        android:text="@string/tue22mean" />
+    <TextView
+        style="@style/tueup"
+        android:text="@string/tueup"
+        android:textSize="8dp" />
+    <ImageView
+        style="@style/tueimgup"
+        android:src="@drawable/arrowup" />
+    <TextView
+        android:text="@string/tuedown"
+        android:textSize="8dp"
+        style="@style/tuedown"/>
+    <ImageView
+        android:src="@drawable/arrowdown"
+        style="@style/tueimgdown"/></androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        style="@style/whenwindy"
+        android:id="@+id/whenwindy"
+        app:layout_constraintTop_toBottomOf="@id/daytimehoursmeaning"
+        app:layout_constraintLeft_toLeftOf="@id/whencloudy">
+    <ImageView
+        style="@style/cloudyimg"
+        android:src="@drawable/cloudy"
+        app:layout_constraintTop_toTopOf="@id/whensun"
+        app:layout_constraintLeft_toLeftOf="@id/whensun"
+        app:layout_constraintRight_toRightOf="@id/whensun"/>
+    <TextView
+        style="@style/wed23mean"
+        android:text="@string/wed23mean" />
+    <TextView
+        style="@style/wedup"
+        android:text="@string/wedup"
+        android:textSize="8dp" />
+    <ImageView
+        style="@style/wed23imgup"
+        android:src="@drawable/arrowup" />
+    <TextView
+        android:text="@string/weddown"
+        android:textSize="8dp"
+        style="@style/wed23down"/>
+    <ImageView
+        style="@style/wed23imgup"
+        android:src="@drawable/arrowdown" /></androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
